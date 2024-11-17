@@ -1,0 +1,30 @@
+a. SELECT * FROM OWNER
+b. 
+            SELECT 
+            L.LOCATION_NUM,
+            L.LOCATION_NAME,
+            L.ADDRESS,
+            L.CITY,
+            L.STATE,
+            L.POSTAL_CODE,
+            C.UNIT_NUM,
+            C.SQR_FT,
+            C.BDRMS,
+            C.BATHS,
+            C.OWNER_NUM
+            FROM CONDO_UNIT C
+        JOIN LOCATION L on C.LOCATION_NUM = L.LOCATION_NUM
+
+c. 
+            SELECT 
+            O.OWNER_NUM,
+            O.FIRST_NAME,
+            O.LAST_NAME,
+            L.ADDRESS,
+            L.CITY,
+            L.STATE,
+            L.POSTAL_CODE,
+            S.SPENT_HOURS,
+            S.NEXT_SERVICE_DATE,
+            C.CONDO_FEE	
+        FROM CONDO_UNIT C,  OWNER O, SERVICE_REQUEST S, LOCATION L
